@@ -20,7 +20,9 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="nome" type="xs:string"/>
-                <xs:element name="curso" type="xs:string"/>
+                <xs:element name="descricao" type="xs:string"/>
+                <xs:element name="marca" type="xs:string"/>
+                <xs:element name="quantidade" type="xs:int"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

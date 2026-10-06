@@ -19,15 +19,29 @@ public class AlunoEndpoint {
 
         ConsultarAlunoResponse response =  new ConsultarAlunoResponse();
 
-        if (request.getRa() == 123) {
+        if (request.getRa() == 1) {
 
-            response.setNome("Maria Silva");
-            response.setCurso("Sistemas para Internet"  );
+            response.setNome("Tenis");
+            response.setDescricao("Tenis preto tamanho 40");
+            response.setMarca("Nike"  );
+            response.setQuantidade(11);
 
-        } else {
+        } else if (request.getRa() == 2){
+        	response.setNome("Celular");
+            response.setDescricao("Celular generico");
+            response.setMarca("Motorola"  );
+            response.setQuantidade(9);
+        	
+        }
+        
+        
+        
+        else {
 
-            response.setNome( "Aluno não encontrado" );
-            response.setCurso("-");
+            response.setNome( "Produto não encontrado" );
+            response.setDescricao( "Produto não encontrado" );
+            response.setMarca( "Produto não encontrado" );
+            response.setQuantidade( 0 );
         }
 
         return response;

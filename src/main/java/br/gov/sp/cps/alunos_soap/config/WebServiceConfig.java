@@ -37,7 +37,7 @@ public class WebServiceConfig {
 
         wsdl.setLocationUri("/ws");
 
-        wsdl.setTargetNamespace( "http://cps.edu.br/alunos");
+        wsdl.setTargetNamespace( "http://cps.sp.gov.br/alunos");
 
         wsdl.setSchema(alunosSchema);
 
