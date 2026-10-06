@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://cps.sp.gov.br/alunos"
+    xmlns:tns="http://cps.sp.gov.br/alunos"
+    elementFormDefault="qualified">
+
+    <!-- REQUISIÇÃO -->
+    <xs:element name="consultarAlunoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ra"  type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- RESPOSTA -->
+    <xs:element name="consultarAlunoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+                <xs:element name="curso" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
