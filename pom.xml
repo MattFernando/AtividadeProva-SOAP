@@ -5,11 +5,19 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>4.1.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.gov.sp.cps</groupId>
 	<artifactId>alunos-soap</artifactId>
+=======
+		<version>4.1.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>br.gov.sp.cps</groupId>
+	<artifactId>cliente-soap</artifactId>
+>>>>>>> d29366c (colocando as coisas da prova passada em uma pasta propria)
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
@@ -30,6 +38,7 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webservices</artifactId>
@@ -87,5 +96,58 @@
 			</plugin>
 		</plugins>
 	</build>
+=======
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-webservices</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>wsdl4j</groupId>
+        <artifactId>wsdl4j</artifactId>
+        <version>1.6.3</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.ws</groupId>
+        <artifactId>spring-ws-security</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+	<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+
+        <plugin>
+            <groupId>org.jvnet.jaxb</groupId>
+            <artifactId>jaxb-maven-plugin</artifactId>
+            <version>4.0.9</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <schemaDirectory>src/main/resources</schemaDirectory>
+                <schemaIncludes>
+                    <include>clientes.xsd</include>
+                </schemaIncludes>
+                <generatePackage>br.gov.sp.cps.clientes_soap.schema</generatePackage>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+>>>>>>> d29366c (colocando as coisas da prova passada em uma pasta propria)
 
 </project>
